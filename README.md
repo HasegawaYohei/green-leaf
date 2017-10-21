@@ -3,10 +3,12 @@
 This is a repository to start developing a wordpress system quick and fast.
 Aimed for Wordpress team developing and continuous integration. 
 
-It uses Docker for set up. Although, you won't need much knowledge about Docker if you just want to start a Wordpress development environment.
+It uses Docker and  for set up. Although, you won't need much knowledge about Docker if you just want to start a Wordpress development environment.
 The `Dockerfile` and `docker-compose.yml` are based on the repository below.
 https://github.com/visiblevc/wordpress-starter
-The major change is that the git is installed in the Ubuntu image that is used in the image.
+
+It uses WP Pusher for CI.
+https://wppusher.com/
 
 # How to run
 1.  Install Docker.
@@ -55,6 +57,13 @@ To login, open up  <a href="http://localhost:8080/wp-admin" target="_blank" rel=
 User: root
 
 Pass: root
+
+# Preperation for Continuous Integration
+
+- Enable the WP Pusher plugin and install the theme following the instructions below.
+	- http://docs.wppusher.com/article/6-getting-started
+	- http://docs.wppusher.com/article/13-working-with-plugins-and-themes
+
 
 # How to develop theme
 
