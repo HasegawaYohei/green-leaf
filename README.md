@@ -3,14 +3,24 @@
 This is a repository to start developing a wordpress system quick and fast.
 Aimed for Wordpress team developing and continuous integration. 
 
-It uses Docker and  for set up. Although, you won't need much knowledge about Docker if you just want to start a Wordpress development environment.
-The `Dockerfile` and `docker-compose.yml` are based on the repository below.
-https://github.com/visiblevc/wordpress-starter
+# Handy points
+1. Using Docker-compose for one command Wordpress set up.
 
-It uses WP Pusher for CI.
-https://wppusher.com/
+	- The `docker-compose.yml` are based on the repository below.
+	- https://github.com/visiblevc/wordpress-starter
+
+	- Edit docker-compose.yml if you want some plugins installed on running.
+
+2. It uses WP Pusher for CI.
+	- Enables automatic deployment of themes when setup is correct
+	- https://wppusher.com/
+
+3. Sample articles already in it.
+4. Using understrap for starter theme.
+	- https://github.com/understrap/understrap
 
 # How to run
+1.  Install and run Docker.
 	- For OS X 10.10.3 Yosemite or newer : <a href="https://docs.docker.com/docker-for-mac/#/what-to-know-before-you-install" target="_blank" rel="nofollow">Docker for mac</a>
 	- For Win10 Pro 64bit : <a href="https://docs.docker.com/docker-for-windows/" target="_blank" rel="nofollow">Docker for Windows</a>
 		1.  **For Win10 64bit Pro**(Pro version required), after installation, click the whale icon and go to Settings. **(Very important)**
