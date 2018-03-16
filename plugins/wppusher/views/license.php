@@ -26,7 +26,7 @@ if ( ! defined('WPINC')) {
                 <p>Your license has <strong><?php echo ($license_key->licenses() > 0) ? $license_key->licenses() : 'unlimited'; ?></strong> site installs. <strong><?php echo $license_key->usedLicenses(); ?></strong> of them are in use.</p>
                 <p>Licenses are <i><a href="https://wppusher.com/faq#renewals">automatically being renewed</a></i>.</p>
             <?php } else { ?>
-                <p><i>You haven't registered any license key for this installation. <strong><a href="https://wppusher.com/pricing?utm_source=plugin&utm_medium=license_tab">Buy one here</a>.</i></strong></p>
+                <p><i>You haven't registered any license key for this installation. <strong><a href="https://wppusher.com/?utm_source=plugin&utm_medium=license_tab#pricing">Buy one here</a>.</i></strong></p>
             <?php } ?>
             </td>
         </tr>

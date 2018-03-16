@@ -11,7 +11,6 @@ It uses WP Pusher for CI.
 https://wppusher.com/
 
 # How to run
-1.  Install Docker.
 	- For OS X 10.10.3 Yosemite or newer : <a href="https://docs.docker.com/docker-for-mac/#/what-to-know-before-you-install" target="_blank" rel="nofollow">Docker for mac</a>
 	- For Win10 Pro 64bit : <a href="https://docs.docker.com/docker-for-windows/" target="_blank" rel="nofollow">Docker for Windows</a>
 		1.  **For Win10 64bit Pro**(Pro version required), after installation, click the whale icon and go to Settings. **(Very important)**

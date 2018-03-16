@@ -22,11 +22,6 @@
 .theme-screenshot .content {
     background-color: #fff;
 }
-.wp-core-ui .button-update-package {
-    position: absolute;
-    bottom: 45px;
-    right: 45px;
-}
 .wp-core-ui .button-save-package {
     position: absolute;
     bottom: 45px;
@@ -36,4 +31,28 @@
 }
 .theme.wppusher-package, .theme.wppusher-package:hover {
     cursor: default;
+}
+
+.ptd-url {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-all;
+    background-color: rgb(247, 247, 247);
+}
+
+.wppusher-code {
+    font-size: 11px;
+    background-color: rgb(247, 247, 247);
+}
+
+.wppusher-red {
+    color: #a00;
+}
+
+.wppusher-green {
+    color: forestgreen;
+}
+
+.wppusher-ptd-url-container {
+    display: none;
 }

@@ -18,7 +18,7 @@ if ( ! defined('WPINC')) {
         <div class="welcome-panel-column-container">
             <div class="welcome-panel-column">
                 <h4>Using Private Repositories</h4>
-                <a class="button button-primary button-hero" href="https://wppusher.com/pricing?utm_source=plugin&utm_medium=hero"><i class="fa fa-credit-card-alt"></i>&nbsp; <strong>Buy a license</strong></a>
+                <a class="button button-primary button-hero" href="https://wppusher.com/?utm_source=plugin&utm_medium=hero#pricing"><i class="fa fa-credit-card-alt"></i>&nbsp; <strong>Buy a license</strong></a>
                 <p>or, type in your license key in the form below</p>
             </div>
             <div class="welcome-panel-column">
@@ -49,6 +49,7 @@ if ( ! defined('WPINC')) {
     <a href="?page=wppusher&tab=gitlab" title="GitLab" class="nav-tab<?php echo $tab === 'gitlab' ? ' nav-tab-active' : null; ?>"><i class="fa fa-gitlab"></i>&nbsp; GitLab</a>
     <a href="?page=wppusher&tab=log" title="Log" class="nav-tab<?php echo $tab === 'log' ? ' nav-tab-active' : null; ?>"><i class="fa fa-file-o"></i>&nbsp; Log</a>
     <a href="http://docs.wppusher.com/" target="_blank" class="nav-tab"><i class="fa fa-book"></i>&nbsp; Documentation</a>
+    <a href="https://wppusher.com/support" target="_blank" class="nav-tab"><i class="fa fa-life-ring"></i>&nbsp; Help</a>
 </h2>
 
 <?php require $tabView; ?>

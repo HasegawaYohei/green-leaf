@@ -1,8 +1,8 @@
 === WP Pusher ===
 Tags: git, deploy, deployment, github, workflow
 Requires at least: 3.9
-Tested up to: 4.8
-Stable tag: 2.4.3
+Tested up to: 4.9
+Stable tag: 2.4.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,17 @@ The way WP Pusher works, packages (themes and plugins) need to be in their own r
 3. Manage themes and plugins from the dashboard
 
 == Changelog ==
+
+= 2.4.5 =
+
+* New plugin and themes overview in WP Pusher - uses tables instead of the squares
+
+= 2.4.4 =
+
+* Add links to help center
+* Fix typo in menu
+* Fix WP Pusher icon styling in WordPress 4.9.1
+* Fix broken links to WP Pusher website
 
 = 2.4.3 =
 
