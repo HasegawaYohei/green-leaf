@@ -34,6 +34,15 @@ Aimed for Wordpress team developing and continuous integration.
 2. Make sure you are not using localhost:8080 port with any other container or web server.
 3. Make sure you are not using container named "wpcontainer" or "dbcontainer".
 4. Clone the repository to your desired working directory.
+6. Run below to use gulp and edit sass on the fly. (Install Node if you haven't.)
+
+```bash
+npm install
+npm install -g gulp
+npm install -D gulp
+gulp-v
+```
+
 5. Run below in the directory you would like to work in.
 ```
 #start the website at localhost:8080. Do this in the directory that has docker-compose.yml in it.
