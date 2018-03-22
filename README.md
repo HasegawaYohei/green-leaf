@@ -19,7 +19,7 @@ Aimed for Wordpress team developing and continuous integration.
 4. Using understrap for starter theme.
 	- https://github.com/understrap/understrap
 
-# How to run
+# Preparation
 1.  Install and run Docker.
 	- For OS X 10.10.3 Yosemite or newer : <a href="https://docs.docker.com/docker-for-mac/#/what-to-know-before-you-install" target="_blank" rel="nofollow">Docker for mac</a>
 	- For Win10 Pro 64bit : <a href="https://docs.docker.com/docker-for-windows/" target="_blank" rel="nofollow">Docker for Windows</a>
@@ -31,23 +31,22 @@ Aimed for Wordpress team developing and continuous integration.
 		- Run `docker-machine ssh default -L 8080:localhost:8080`.
 		- Make a working directory to clone the repository under C:User/{your-name}
 	
-2. Make sure you are not using localhost:8080 port with any other container or web server.
-3. Make sure you are not using container named "wpcontainer" or "dbcontainer".
 4. Clone the repository to your desired working directory.
-6. Run below to use gulp and edit sass on the fly. (Install Node if you haven't.)
-
+6. Run below to isntall packages and gulp. (Install Node if you haven't.)
 ```bash
+cd clientTheme
 npm install
-npm install -g gulp
-npm install -D gulp
-gulp-v
 ```
 
-5. Run below in the directory you would like to work in.
+# Start Docker contatiner.
+1. Make sure you are not using localhost:8080 port with any other container or web server.
+2. Make sure you are not using container named "wpcontainer" or "dbcontainer".
 ```
-#start the website at localhost:8080. Do this in the directory that has docker-compose.yml in it.
-docker-compose up
+cd clientTheme
+gulp watch-bs
 ```
+3. Do ```docker-compose up``` in the directory that has docker-compose.yml in it.
+3. **In a different terminal of above**, Run below in terminal to edit css on the fly and live reload the browser.
 
 **That's it. Simple.**
 
@@ -59,14 +58,10 @@ wpcontainer | =======================================
 wpcontainer | WordPress Configuration Complete!
 wpcontainer | =======================================
 ```
-**The message would stop here** so open up <a href="http://localhost:8080" target="_blank" rel="nofollow">localhost:8080</a> in a browser. A front page should open.
-To stop running the container, ctrl+c then
-
-```
-docker-compose down
-```
-Now, <a href="http://localhost:8080" target="_blank" rel="nofollow">localhost:8080</a> should not show anything.
-Do `docker-compose up` to start developing again.
+**The message would stop here** so open up <a href="http://localhost:3000" target="_blank" rel="nofollow">localhost:3000</a> in a browser. A front page should open.
+- To stop stope the container, ctrl+c 
+- To remove and restart, ```docker-compose down``` 
+	- Restart required if 
 
 # Login Info
 
@@ -94,6 +89,21 @@ Using Source Tree.
 4. If the the db is changed, run `docker exec wpcontainer sh -c 'sudo -u www-data wp db export /data/init.sql'`. This will dump the sql and this sql would be used for initializing sql when `docker-comnpose up`.
 5. Commit and push `feature/foo` you have made.
 6. Send pull request to `origin/develop` branch from `feature/foo` on github. (Win: shift + alt + p, Mac: ⌘ + ⌥ + p).
+
+----
+
+## Which files to edit
+
+### CSS and Sass Files
+
+- Your design goes into: `/sass/theme`. 
+	- Add your styles to the `/sass/theme/_theme.scss` 
+	- Add your variables to the `/sass/theme/_theme_variables.scss`.
+		- Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
+
+	- For further info of css and sass files, look below.
+		- https://github.com/understrap/understrap#confused-by-all-the-css-and-sass-files
+
 
 ----------
 

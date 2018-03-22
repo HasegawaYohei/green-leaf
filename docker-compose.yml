@@ -13,12 +13,9 @@ services:
       DB_NAME: wordpress
       DB_PASS: root
       PLUGINS: >-
-        all-in-one-seo-pack
-        google-sitemap-generator
-        wp-multibyte-patch
-        [WP-API]https://github.com/WP-API/WP-API/archive/master.zip
-
-
+        all-in-one-seo-pack,
+        google-sitemap-generator,
+        wp-multibyte-patch,
       THEMES: >-
         [local]clientTheme
     container_name: wpcontainer
