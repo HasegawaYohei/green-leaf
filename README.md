@@ -32,27 +32,27 @@ Aimed for Wordpress team developing and continuous integration.
 		- Make a working directory to clone the repository under C:User/{your-name}
 	
 4. Clone the repository to your desired working directory.
-6. Run below to isntall packages and gulp. (Install Node if you haven't.)
+6. Run below to isntall packages. (Install Node before this if you haven't.)
 ```bash
 cd clientTheme
 npm install
 ```
 
 # Start Docker contatiner.
-1. Make sure you are not using localhost:8080 port with any other container or web server.
+1. Make sure you are not using localhost:8080 or 3000 port with any other container or web server.
 2. Make sure you are not using container named "wpcontainer" or "dbcontainer".
+3. Do ```docker-compose up``` in the directory that has docker-compose.yml in it.
+3. **In a different terminal of above**, run below to edit css on the fly and live reload the browser.
 ```
 cd clientTheme
 gulp watch-bs
 ```
-3. Do ```docker-compose up``` in the directory that has docker-compose.yml in it.
-3. **In a different terminal of above**, Run below in terminal to edit css on the fly and live reload the browser.
 
 **That's it. Simple.**
 
 ----------
 
-By doing above, below should show up in the terminal eventually.
+By `docker-compose up`, below should show up in the terminal eventually.
 ```
 wpcontainer | =======================================
 wpcontainer | WordPress Configuration Complete!
