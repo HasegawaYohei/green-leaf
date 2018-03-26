@@ -9,6 +9,7 @@ services:
       - ./initialSql:/data
       - ./clientTheme:/app/wp-content/themes/clientTheme
       - ./plugins:/app/wp-content/plugins
+      - ./wordpress:/app/
     environment:
       DB_NAME: wordpress
       DB_PASS: root
@@ -19,7 +20,7 @@ services:
       THEMES: >-
         [local]clientTheme
     container_name: wpcontainer
-        
+
   db:
     image: mariadb:10
     environment:

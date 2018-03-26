@@ -16,6 +16,9 @@ Thumbs.db
 .idea/
 
 # Wordpress
-wp-content/*
-!wp-content/themes/
+wordpress/
+# wp-content/*
+# !wp-content/themes/
 
+plugins/*
+!plugins/wppusher
