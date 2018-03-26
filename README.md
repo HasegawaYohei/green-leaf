@@ -34,6 +34,7 @@ Aimed for Wordpress team developing and continuous integration.
 4. Clone the repository to your desired working directory.
 6. Run below to isntall packages. (Install Node before this if you haven't.)
 ```bash
+sudo npm install -g gulp
 cd clientTheme
 npm install
 ```
