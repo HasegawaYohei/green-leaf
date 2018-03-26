@@ -1,72 +1,66 @@
 <?php
 /**
- * The main template file.
+ * Template Name: Full Width Page
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
  * @package understrap
  */
 
 get_header();
-
-$container = get_theme_mod('understrap_container_type');
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php if (is_front_page() && is_home()) : ?>
-  <?php get_template_part('global-templates/hero'); ?>
-<?php endif; ?>
+<div class="wrapper" id="full-width-page-wrapper">
+  
+  <section id="work_domain">
+    <h2>事業紹介</h2>
+  </section>
+  <section id="about">
+    <h2>ABOUT</h2>
+  </section>
+  <section id="news">
+    <h2>NEWS</h2>
+    <div class='d-flex'>
+        <div class="col-2p-2">2018-03-26</div>
 
-<div class="wrapper" id="index-wrapper">
 
-  <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 
-    <div class="row">
+    </div>
 
-      <!-- Do the left sidebar check and opens the primary div -->
-      <?php get_template_part('global-templates/left-sidebar-check'); ?>
+  </section>
 
-      <main class="site-main" id="main">
+  <div class="<?php echo esc_attr( $container ); ?>" id="content">
+  
+ 
+		<div class="row">
 
-        <?php if (have_posts()) : ?>
+			<div class="col-md-12 content-area" id="primary">
 
-          <?php /* Start the Loop */ ?>
+				<main class="site-main" id="main" role="main">
 
-          <?php while (have_posts()) : the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-            <?php
+						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-            /*
-             * Include the Post-Format-specific template for the content.
-             * If you want to override this in a child theme, then include a file
-             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-             */
-            get_template_part('loop-templates/content', get_post_format());
-            ?>
+						<?php
+						// If comments are open or we have at least one comment, load up the comment template.
+						if ( comments_open() || get_comments_number() ) :
 
-          <?php endwhile; ?>
+							comments_template();
 
-        <?php else : ?>
+						endif;
+						?>
 
-          <?php get_template_part('loop-templates/content', 'none'); ?>
+					<?php endwhile; // end of the loop. ?>
 
-        <?php endif; ?>
+				</main><!-- #main -->
 
-      </main><!-- #main -->
+			</div><!-- #primary -->
 
-      <!-- The pagination component -->
-      <?php understrap_pagination(); ?>
+		</div><!-- .row end -->
 
-    </div><!-- #primary -->
-
-    <!-- Do the right sidebar check -->
-    <?php get_template_part('global-templates/right-sidebar-check'); ?>
-  </div><!-- .row -->
-
-</div><!-- Container end -->
+	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
