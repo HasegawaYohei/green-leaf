@@ -8,44 +8,66 @@
  */
 
 $the_theme = wp_get_theme();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod('understrap_container_type');
 ?>
 
-<?php get_sidebar( 'footerfull' ); ?>
+<?php get_sidebar('footerfull'); ?>
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+  <div class="<?php echo esc_attr($container); ?>">
 
-		<div class="row">
+    <div class="row">
 
-			<div class="col-md-12">
+      <div class="company-info col-3">
+        <div class="footer-company-name">株式会社茗溪コンサルタンツ</div>
+        <div class="footer-telephone-number">TEL:03-5521-5925</div>
+        <div class="footer-available-hour">TEL:03-5521-5925</div>
+        <div class="footer-address">〒100-0014<br>東京都千代田区永田町2丁目14-2<br>（山王グランドビル）</div>
+      </div>
 
-				<footer class="site-footer" id="colophon">
+      <div class="col-9 d-flex flex-column">
 
-					<div class="site-info">
+        <div class="row footer-menu">
+          <div class="col-2">
+            私達について
+            <ul>
+              <li>会社概要</li>
+              <li>企業理念</li>
+              <li>代表挨拶</li>
+            </ul>
 
-							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( 
-							/* translators:*/
-							esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
-								<span class="sep"> | </span>
-					
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://understrap.com', 'understrap')).'">understrap.com</a>' ); ?> 
-				
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
-					</div><!-- .site-info -->
+          </div>
+          <div class="col-2">事業紹介
+            <ul>
+              <li>企業管財</li>
+              <li>地域振興</li>
+              <li>研究開発</li>
+            </ul>
+          </div>
+          <div class="col-2">採用について
+            <ul>
+              <li>新卒採用</li>
+              <li>中途採用</li>
 
-				</footer><!-- #colophon -->
+            </ul>
 
-			</div><!--col end -->
+          </div>
+          <div class="col-2">代表ブログ</div>
+          <div class="col-2">問い合わせ</div>
+        </div>
 
-		</div><!-- row end -->
+        <div class="row site-info justify-content-end mt-auto">
 
-	</div><!-- container end -->
+          ©MEIKEI CONSULTANTS All Rights Reserved
+        </div>
+
+
+      </div><!--col end -->
+
+    </div><!-- row end -->
+
+  </div><!-- container end -->
 
 </div><!-- wrapper end -->
 
