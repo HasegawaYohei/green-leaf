@@ -10627,6 +10627,10 @@ ul {
   margin: 0 0 0 1em;
   padding: 0; }
 
+.footer-content {
+  max-width: 900px;
+  margin: 2em auto; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

@@ -15,21 +15,19 @@ $container = get_theme_mod('understrap_container_type');
 
 <div class="wrapper" id="wrapper-footer">
 
-  <div class="<?php echo esc_attr($container); ?>">
+<footer>
+    <div class="row footer-content">
 
-    <div class="row">
-
-      <div class="company-info col-3">
+      <div class="footer-company-info col-md-3 col-12">
         <div class="footer-company-name">株式会社茗溪コンサルタンツ</div>
         <div class="footer-telephone-number">TEL:03-5521-5925</div>
         <div class="footer-available-hour">TEL:03-5521-5925</div>
         <div class="footer-address">〒100-0014<br>東京都千代田区永田町2丁目14-2<br>（山王グランドビル）</div>
       </div>
 
-      <div class="col-9 d-flex flex-column">
-
-        <div class="row footer-menu">
-          <div class="col-2">
+      <div class="footer-menu col-md-9 col-12 d-md-flex flex-md-column">
+        <div class="row d-md-flex flex-md-row justify-content-md-between flex-column">
+          <div class="col-xs-12">
             私達について
             <ul>
               <li>会社概要</li>
@@ -38,14 +36,15 @@ $container = get_theme_mod('understrap_container_type');
             </ul>
 
           </div>
-          <div class="col-2">事業紹介
+          <div class="col-xs-12">
+            事業紹介
             <ul>
               <li>企業管財</li>
               <li>地域振興</li>
               <li>研究開発</li>
             </ul>
           </div>
-          <div class="col-2">採用について
+          <div class="col-xs-12">採用について
             <ul>
               <li>新卒採用</li>
               <li>中途採用</li>
@@ -53,8 +52,8 @@ $container = get_theme_mod('understrap_container_type');
             </ul>
 
           </div>
-          <div class="col-2">代表ブログ</div>
-          <div class="col-2">問い合わせ</div>
+          <div class="col-xs-12">代表ブログ</div>
+          <div class="col-xs-12">問い合わせ</div>
         </div>
 
         <div class="row site-info justify-content-end mt-auto">
@@ -67,8 +66,8 @@ $container = get_theme_mod('understrap_container_type');
 
     </div><!-- row end -->
 
-  </div><!-- container end -->
-
+<!--  </div><!-- container end -->
+</footer>
 </div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->

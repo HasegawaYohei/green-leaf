@@ -89,7 +89,7 @@ $container = get_theme_mod('understrap_container_type');
       <div class='d-flex mx-3'>
         <div class="col-2 p-2">2018-03-26</div>
         <div class="col-2 p-2">ニュース</div>
-        <div class="col-7 p-2">Web pageをlonglonglonglonglonglonglonglonglonglonglongリニューアルしました</div>
+        <div class="col-7 p-2">Web preeeeeeeeeeee long article</div>
         <div class="col-1 pr-0 py-2 news_readmore_icon">icon</div>
       </div>
     </section>
