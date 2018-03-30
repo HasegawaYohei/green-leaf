@@ -29,6 +29,10 @@ if( !class_exists('WPUpdatesPluginUpdater_957') ) {
                 return $transient;
             }
 
+            if (! isset($transient->checked[$this->plugin_path])) {
+                return $transient;
+            }
+
             $raw_response = wp_remote_get($this->api_url . '?v=' . $transient->checked[$this->plugin_path]);
 
             $response = null;

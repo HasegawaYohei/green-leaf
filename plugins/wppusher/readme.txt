@@ -2,7 +2,7 @@
 Tags: git, deploy, deployment, github, workflow
 Requires at least: 3.9
 Tested up to: 4.9
-Stable tag: 2.4.5
+Stable tag: 2.4.6
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,10 @@ The way WP Pusher works, packages (themes and plugins) need to be in their own r
 3. Manage themes and plugins from the dashboard
 
 == Changelog ==
+
+= 2.4.6 =
+
+* Fix "PHP Notice: Undefined index" when looking for updates
 
 = 2.4.5 =
 
