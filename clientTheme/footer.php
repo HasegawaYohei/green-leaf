@@ -25,8 +25,10 @@ $container = get_theme_mod('understrap_container_type');
         <div class="footer-address">〒100-0014<br>東京都千代田区永田町2丁目14-2<br>（山王グランドビル）</div>
       </div>
 
-      <div class="footer-menu col-md-8 col-12 flex-md-column">
-        <div class="row flex-md-row justify-content-md-between flex-column">
+      <!--  Copyright    -->
+      <div class="footer-menu col-md-8 col-12 flex-md-column d-flex">
+
+        <div class="d-flex flex-md-row justify-content-md-between flex-column">
 
           <div class="col-xs-12">
             私達について
@@ -57,7 +59,7 @@ $container = get_theme_mod('understrap_container_type');
           <div class="col-xs-12">問い合わせ</div>
         </div>
 
-        <div class="row site-info justify-content-end mt-auto">
+        <div class="d-flex site-info justify-content-end mt-auto">
 
           ©MEIKEI CONSULTANTS All Rights Reserved
         </div>
