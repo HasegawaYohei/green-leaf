@@ -155,20 +155,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     <section id="news" class="content">
       <h2>NEWS</h2>
-      <div class='d-flex'>
-        <div class="col-2 p-2">2018-03-26</div>
+      <div class='d-flex justify-content-around'>
+        <div class="col-2 p-2 pl-0">2018-03-26</div>
         <div class="col-2 p-2">ニュース</div>
         <div class="col-7 p-2">Web pageをリニューアルしました</div>
         <div class="col-1 pr-0 py-2 news_readmore_icon">icon</div>
       </div>
       <div class='d-flex'>
-        <div class="col-2 p-2">2018-03-26</div>
+        <div class="col-2 p-2 pl-0">2018-03-26</div>
         <div class="col-2 p-2">ニュース</div>
         <div class="col-7 p-2">Webiddd pageをnannfdsafdjaslfaリニューアルしました</div>
         <div class="col-1 pr-0 py-2 news_readmore_icon">icon</div>
       </div>
       <div class='d-flex'>
-        <div class="col-2 p-2">2018-03-26</div>
+        <div class="col-2 p-2 pl-0">2018-03-26</div>
         <div class="col-2 p-2">ニュース</div>
         <div class="col-7 p-2">Web preeeeeeeeeeee long article</div>
         <div class="col-1 pr-0 py-2 news_readmore_icon">icon</div>

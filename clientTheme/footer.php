@@ -26,7 +26,7 @@ $container = get_theme_mod('understrap_container_type');
       </div>
 
       <!--  Copyright    -->
-      <div class="footer-menu col-md-8 col-12 flex-md-column d-flex">
+      <div class="footer-menu col-md-8 col-12 flex-column d-flex">
 
         <div class="d-flex flex-md-row justify-content-md-between flex-column">
 
