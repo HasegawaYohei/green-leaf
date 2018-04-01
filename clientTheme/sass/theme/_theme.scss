@@ -12,6 +12,11 @@ section > h2 {
   margin-bottom: 1em;
 }
 
+.work-domain{
+
+  border:medium solid #efeb0c;
+}
+
 .card-title {
   margin-bottom: auto; //need to overwrite default
   display: flex;
@@ -33,10 +38,16 @@ section > h2 {
 ul {
   list-style: none;
   margin: 0 0 0 1em;
-  padding: 0;
+  padding: 0 ;
 }
 
 .footer-content {
-  max-width: 900px;
+  max-width: 1050px;
   margin: 2em auto;
+}
+
+.tb{
+  background-color: #ff2dfa;
+  //padding: #800e79;
+  border: medium solid #00aced;
 }

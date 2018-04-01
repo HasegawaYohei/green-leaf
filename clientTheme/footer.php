@@ -16,7 +16,7 @@ $container = get_theme_mod('understrap_container_type');
 <div class="wrapper" id="wrapper-footer">
 
 <footer>
-    <div class="row footer-content">
+    <div class="row footer-content justify-content-between">
 
       <div class="footer-company-info col-md-4 col-12">
         <div class="footer-company-name">株式会社茗溪コンサルタンツ</div>
@@ -25,8 +25,9 @@ $container = get_theme_mod('understrap_container_type');
         <div class="footer-address">〒100-0014<br>東京都千代田区永田町2丁目14-2<br>（山王グランドビル）</div>
       </div>
 
-      <div class="footer-menu col-md-8 col-12 d-md-flex flex-md-column">
-        <div class="row d-md-flex flex-md-row justify-content-md-between flex-column">
+      <div class="footer-menu col-md-8 col-12 flex-md-column">
+        <div class="row flex-md-row justify-content-md-between flex-column">
+
           <div class="col-xs-12">
             私達について
             <ul>

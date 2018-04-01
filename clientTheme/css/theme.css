@@ -10599,6 +10599,9 @@ section > h2 {
   text-align: center;
   margin-bottom: 1em; }
 
+.work-domain {
+  border: medium solid #efeb0c; }
+
 .card-title {
   margin-bottom: auto;
   display: -webkit-box;
@@ -10628,8 +10631,12 @@ ul {
   padding: 0; }
 
 .footer-content {
-  max-width: 900px;
+  max-width: 1050px;
   margin: 2em auto; }
+
+.tb {
+  background-color: #ff2dfa;
+  border: medium solid #00aced; }
 
 /*
 * Use existing Bootstrap 4 classes and
