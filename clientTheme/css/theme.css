@@ -10591,6 +10591,9 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+.wrapper {
+  padding: 0; }
+
 section {
   max-width: 850px;
   margin: 2em auto; }
@@ -10601,6 +10604,12 @@ section > h2 {
 
 .work-domain {
   border: medium solid #efeb0c; }
+
+.about-card-left {
+  padding-right: 0; }
+
+.about-card-right {
+  padding-left: 0; }
 
 .card-title {
   margin-bottom: auto;
@@ -10633,7 +10642,8 @@ ul {
 
 .footer-content {
   max-width: 1050px;
-  margin: 2em auto; }
+  margin: 2em auto;
+  font-size: 0.85em; }
 
 .tb {
   background-color: #ff2dfa;

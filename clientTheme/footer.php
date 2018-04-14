@@ -18,7 +18,7 @@ $container = get_theme_mod('understrap_container_type');
 <footer>
     <div class="row footer-content justify-content-between">
 
-      <div class="footer-company-info col-md-4 col-12">
+      <div class="footer-company-info col-sm-4 col-12">
         <div class="footer-company-name">株式会社茗溪コンサルタンツ</div>
         <div class="footer-telephone-number">TEL:03-5521-5925</div>
         <div class="footer-available-hour">TEL:03-5521-5925</div>
@@ -26,9 +26,9 @@ $container = get_theme_mod('understrap_container_type');
       </div>
 
       <!--  Copyright    -->
-      <div class="footer-menu col-md-8 col-12 flex-column d-flex">
+      <div class="footer-menu col-sm-8 col-12 flex-column d-flex">
 
-        <div class="d-flex flex-md-row justify-content-md-between flex-column">
+        <div class="d-flex flex-sm-row justify-content-sm-between flex-column">
 
           <div class="col-xs-12">
             私達について

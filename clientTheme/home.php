@@ -10,7 +10,8 @@
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
-
+<!--todo: Layout content inside card.-->
+<!--todo: Create the header-->
 <div class="wrapper" id="full-width-page-wrapper">
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -49,10 +50,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div class="card">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6 about-card-left">
               <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x200&w=200&h=200" class="w-100">
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6 about-card-right">
               <div class="card-block px-3">
                 <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
                 <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -65,7 +66,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div class="card">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6 about-card-right order-sm-2">
+              <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x200&w=200&h=200" class="w-100">
+            </div>
+            <div class="col-sm-6 about-card-left order-sm-1">
               <div class="card-block px-3">
                 <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
                 <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -73,18 +77,16 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <a href="#" class="btn btn-primary">Read More</a>
               </div>
             </div>
-            <div class="col-md-6">
-              <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x200&w=200&h=200" class="w-100">
-            </div>
+
           </div>
         </div>
 
         <div class="card">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6 about-card-left">
               <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x200&w=200&h=200" class="w-100">
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6 about-card-right">
               <div class="card-block px-3">
                 <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
                 <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>

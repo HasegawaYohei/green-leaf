@@ -1,5 +1,10 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+.wrapper {
+  padding: 0
+
+}
+
 section {
   max-width: 850px;
   margin: 2em auto;
@@ -15,6 +20,15 @@ section > h2 {
 .work-domain{
 
   border:medium solid #efeb0c;
+}
+
+.about-card-left {
+
+  padding-right : 0;
+}
+
+.about-card-right{
+  padding-left: 0;
 }
 
 .card-title {
@@ -44,6 +58,7 @@ ul {
 .footer-content {
   max-width: 1050px;
   margin: 2em auto;
+  font-size: 0.85em;
 }
 
 .tb{
