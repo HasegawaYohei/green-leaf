@@ -84,7 +84,12 @@ gulp.task( 'sass', function() {
             }
         } ) )
         .pipe( sass( { errLogToConsole: true } ) )
-        .pipe( autoprefixer( 'last 2 versions' ) )
+        .pipe( autoprefixer({
+          // ☆IEは11以上、Androidは4.4以上
+          // その他は最新2バージョンで必要なベンダープレフィックスを付与する設定
+          browsers: ["last 2 versions", "ie >= 11", "Android >= 4"],
+          grid: true
+        }) )
         .pipe( gulp.dest( paths.css ) )
         .pipe( rename( 'custom-editor-style.css' ) );
     return stream;
@@ -172,11 +177,11 @@ gulp.task( 'browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { 
+gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
 } );
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task( 'scripts', function() {
     var scripts = [
