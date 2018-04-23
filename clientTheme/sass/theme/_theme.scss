@@ -5,10 +5,17 @@
 
 }
 
+
 section {
   max-width: 850px;
   margin: 2em auto;
 
+}
+
+// これをしないとFlex-endが効かない
+.navbar-collapse{
+
+  flex-grow: unset;
 }
 
 
@@ -30,6 +37,7 @@ section > h2 {
 .about-card-right{
   padding-left: 0;
 }
+//
 
 .card-title {
   margin-bottom: auto; //need to overwrite default
@@ -37,6 +45,29 @@ section > h2 {
   justify-content: center;
   align-items: center;
 }
+
+.about-card-title {
+  // padding-top: 1.7em;
+}
+
+.about-card-text {
+
+  font-size: medium;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: auto; //need to overwrite default
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.about-card-button {
+  // margin-bottom: 1rem
+}
+
 
 .card-body {
   padding-top: $spacer * 0.5;

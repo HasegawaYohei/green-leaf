@@ -51,14 +51,15 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="card">
           <div class="row">
             <div class="col-sm-6 about-card-left">
-              <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x200&w=200&h=200" class="w-100">
+              <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x100&w=200&h=150" class="w-100">
             </div>
-            <div class="col-sm-6 about-card-right">
-              <div class="card-block px-3">
-                <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
-                <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+            <div class="col-sm-6 about-card-right d-flex justify-content-center align-self-center">
+              <div class="card-block p-3">
+                <h4 class="card-title about-card-title">Lorem ipsum dolor sit amet</h4>
+                <p class="card-text about-card-text">ConsecteturUt enisi ut aliquip ex nsequat. </p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-primary about-card-button">Read More</a>
+                </div>
               </div>
             </div>
           </div>
@@ -67,15 +68,16 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="card">
           <div class="row">
             <div class="col-sm-6 about-card-right order-sm-2">
-              <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x200&w=200&h=200" class="w-100">
+              <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x100&w=200&h=150" class="w-100">
             </div>
-            <div class="col-sm-6 about-card-left order-sm-1">
-              <div class="card-block px-3">
-                <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
-                <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-              </div>
+            <div class="col-sm-6 about-card-left order-sm-1 d-flex justify-content-center align-self-center">
+                <div class="card-block p-3">
+                  <h4 class="card-title about-card-title">Lorem ipsum dolor sit amet</h4>
+                  <p class="card-text about-card-text">ConsecteturUt enisi ut aliquip ex nsequat. </p>
+                  <div class="text-center">
+                  <a href="#" class="btn btn-primary about-card-button">Read More</a>
+                </div>
+                </div>
             </div>
 
           </div>
@@ -84,14 +86,16 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="card">
           <div class="row">
             <div class="col-sm-6 about-card-left">
-              <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x200&w=200&h=200" class="w-100">
+              <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=200x100&w=200&h=150" class="w-100">
+
             </div>
-            <div class="col-sm-6 about-card-right">
-              <div class="card-block px-3">
-                <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
-                <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+            <div class="col-sm-6 about-card-right d-flex justify-content-center align-self-center">
+              <div class="card-block p-3">
+                <h4 class="card-title about-card-title">Lorem ipsum dolor sit amet</h4>
+                <p class="card-text about-card-text">ConsecteturUt enisi ut aliquip ex nsequat. </p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-primary about-card-button">Read More</a>
+                </div>
               </div>
             </div>
           </div>
@@ -110,11 +114,6 @@ $container = get_theme_mod( 'understrap_container_type' );
           <img class="card-img-top" src="<?php bloginfo( 'template_directory' ) ?>/img/index.svg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional-->
-            <!--              content. This content is a little bit longer.</p>-->
-            <!--            <p class="card-text">-->
-            <!--              <small class="text-muted">Last updated 3 mins ago</small>-->
-            <!--            </p>-->
           </div>
         </div>
         <div class="card">
@@ -178,12 +177,11 @@ $container = get_theme_mod( 'understrap_container_type' );
     </section>
   </main>
 
+  <!--  <div class="--><?php //echo esc_attr( $container ); ?><!--" id="content">-->
+  <!--  </div><!-- Container end -->
 
-<!--  <div class="--><?php //echo esc_attr( $container ); ?><!--" id="content">-->
-<!---->
-<!---->
-<!--  </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
+

@@ -129,7 +129,7 @@ If you have an exported `.sql` file from an existing website, drop the file into
 
 If you want to create a dump of your development database, you can run:
 ```
-docker exec wpcontainer sh -c 'sudo -u www-data wp db export /data/init.sql'
+docker exec wpcontainer sh -c "sudo -u www-data wp db export /data/init.sql"
 ```
 
 Finally, sometimes your development environment runs on a different domain than your live one. The live will be `example.com` and the development `localhost:8080`. This project does a search and replace for you. You can set the `SEARCH_REPLACE: example.com,localhost:8080` environment variable in the `docker-compose.yml`.
@@ -139,6 +139,6 @@ Finally, sometimes your development environment runs on a different domain than 
 Follow the example below. Basically, change after "wp".
 
 ```
-docker exec wpcontainer sh -c 'sudo -u www-data wp db export /data/init.sql'
-docker exec wpcontainer sh -c 'sudo -u www-data wp theme activate clientTheme'
+docker exec wpcontainer sh -c "sudo -u www-data wp db export /data/init.sql"
+docker exec wpcontainer sh -c "sudo -u www-data wp theme activate clientTheme"
 ```
