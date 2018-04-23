@@ -5,7 +5,6 @@
 
 }
 
-
 section {
   max-width: 850px;
   margin: 2em auto;
@@ -13,30 +12,94 @@ section {
 }
 
 // これをしないとFlex-endが効かない
-.navbar-collapse{
+.navbar-collapse {
 
   flex-grow: unset;
 }
 
+//.container {
+//  width: 100%;
+//  padding-right: 15px;
+//  padding-left: 15px;
+//  margin-right: auto;
+//  margin-left: auto; }
+//@media (min-width: 576px) {
+//  .container {
+//    max-width: 540px; } }
+//@media (min-width: 768px) {
+//  .container {
+//    max-width: 900px; } }
+//@media (min-width: 992px) {
+//  .container {
+//    max-width: 960px; } }
+//@media (min-width: 1200px) {
+//  .container {
+//    max-width: 1140px; } }
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .container {
+    max-width: 900px;
+
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  li {
+    font-size: 0.85em;
+  }
+
+
+}
+
+@media (min-width: 768px) {
+
+  .navbar-nav {
+
+    > li + li {
+      border-left: 1.5px solid purple;
+    }
+
+    .nav-link {
+      padding: 0 0;
+    }
+
+    //>  li:before {
+    //    content: '';
+    //    position: absolute;
+    //    //left: 50%;
+    //    //top: -15px;/*線の上下位置*/
+    //    display: inline-block;
+    //    width: 60px;/*線の長さ*/
+    //    height: 5px;/*線の太さ*/
+    //    transform: translateX(-50%);/*位置調整*/
+    //    background-color: blue;/*線の色*/
+    //    border-radius: 2px;/*線の丸み*/
+    //  }
+
+  }
+
+}
 
 section > h2 {
   text-align: center;
   margin-bottom: 1em;
 }
 
-.work-domain{
+.work-domain {
 
-  border:medium solid #efeb0c;
+  border: medium solid #efeb0c;
 }
 
 .about-card-left {
 
-  padding-right : 0;
+  padding-right: 0;
 }
 
-.about-card-right{
+.about-card-right {
   padding-left: 0;
 }
+
 //
 
 .card-title {
@@ -62,12 +125,9 @@ section > h2 {
 
 }
 
-
-
 .about-card-button {
   // margin-bottom: 1rem
 }
-
 
 .card-body {
   padding-top: $spacer * 0.5;
@@ -83,7 +143,7 @@ section > h2 {
 ul {
   list-style: none;
   margin: 0 0 0 1em;
-  padding: 0 ;
+  padding: 0;
 }
 
 .footer-content {
@@ -92,7 +152,7 @@ ul {
   font-size: 0.85em;
 }
 
-.tb{
+.tb {
   background-color: #ff2dfa;
   //padding: #800e79;
   border: medium solid #00aced;

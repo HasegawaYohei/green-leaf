@@ -10619,6 +10619,20 @@ section {
       -ms-flex-positive: unset;
           flex-grow: unset; }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 900px;
+    padding-right: 10px;
+    padding-left: 10px; }
+  li {
+    font-size: 0.85em; } }
+
+@media (min-width: 768px) {
+  .navbar-nav > li + li {
+    border-left: 1.5px solid purple; }
+  .navbar-nav .nav-link {
+    padding: 0 0; } }
+
 section > h2 {
   text-align: center;
   margin-bottom: 1em; }
