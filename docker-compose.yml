@@ -18,12 +18,12 @@ services:
         wp-multibyte-patch,
       THEMES: >-
         [local]clientTheme
-    container_name: wpcontainer
+    container_name: green_leaf_wpcontainer
 
   db:
     image: mariadb:10
     environment:
       MYSQL_ROOT_PASSWORD: root
-    container_name: dbcontainer
+    container_name: gree_leaf_dbcontainer
 volumes:
   data:
