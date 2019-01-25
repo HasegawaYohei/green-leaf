@@ -1,159 +1,384 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $font-normal !important;
+  font-family: 'Noto Sans', sans-serif !important;
+  color: $black !important;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: $font-small;
+}
+
+td {
+  border-top: 0px !important;
+  font-size: $font-small;
+}
+
+.font-15 {
+  font-size: $font-normal;
+}
+
+.text-xs-center {
+  text-align: center;
+}
+
+.blog-title {
+  font-size: $font-title;
+  font-weight: $bold;
+  color: $orange;
+  word-break: keep-all;
+}
+
+.blog-list {
+  line-height: 2;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-weight: $bold;
+  font-size: $font-title-sm;
+  margin-bottom: 3em;
+}
+
+.section-title:before,
+.section-title:after {
+  content: "";
+  border-top: 1px dashed;
+  flex-grow: 1;
+}
+
+.section-title:before {
+  margin-right: 30px;
+}
+
+.section-title:after {
+  margin-left: 30px;
+}
+
+.section-box {
+  max-width: 1000px !important;
+  padding: 0 !important;
+}
+
+.box-right {
+  margin: 0 auto;
+  padding: 0 30px !important;
+  max-width: $box-size !important;
+}
+
+.box-left {
+  margin: 0 auto;
+  padding: 0 30px !important;
+  max-width: $box-size !important;
+}
+
+.section-row {
+  max-width: 1000px;
+  margin: 0 !important;
+}
+
+.img-description {
+  max-width: $box-size !important;
+}
+
+.event-box>p {
+  margin: 0;
+}
 
 .wrapper {
-  padding: 0
-
-}
-
-section {
-  max-width: 850px;
-  margin: 2em auto;
-
-}
-
-// これをしないとFlex-endが効かない
-.navbar-collapse {
-
-  flex-grow: unset;
-}
-
-//.container {
-//  width: 100%;
-//  padding-right: 15px;
-//  padding-left: 15px;
-//  margin-right: auto;
-//  margin-left: auto; }
-//@media (min-width: 576px) {
-//  .container {
-//    max-width: 540px; } }
-//@media (min-width: 768px) {
-//  .container {
-//    max-width: 900px; } }
-//@media (min-width: 992px) {
-//  .container {
-//    max-width: 960px; } }
-//@media (min-width: 1200px) {
-//  .container {
-//    max-width: 1140px; } }
-
-@media (min-width: 768px) and (max-width: 992px) {
-
-  .container {
-    max-width: 900px;
-
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  li {
-    font-size: 0.85em;
-  }
-
-
-}
-
-@media (min-width: 768px) {
-
-  .navbar-nav {
-
-    > li + li {
-      border-left: 1.5px solid purple;
-    }
-
-    .nav-link {
-      padding: 0 0;
-    }
-
-    //>  li:before {
-    //    content: '';
-    //    position: absolute;
-    //    //left: 50%;
-    //    //top: -15px;/*線の上下位置*/
-    //    display: inline-block;
-    //    width: 60px;/*線の長さ*/
-    //    height: 5px;/*線の太さ*/
-    //    transform: translateX(-50%);/*位置調整*/
-    //    background-color: blue;/*線の色*/
-    //    border-radius: 2px;/*線の丸み*/
-    //  }
-
-  }
-
-}
-
-section > h2 {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.work-domain {
-
-  border: medium solid #efeb0c;
-}
-
-.about-card-left {
-
-  padding-right: 0;
-}
-
-.about-card-right {
-  padding-left: 0;
-}
-
-//
-
-.card-title {
-  margin-bottom: auto; //need to overwrite default
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-card-title {
-  // padding-top: 1.7em;
-}
-
-.about-card-text {
-
-  font-size: medium;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: auto; //need to overwrite default
-  display: flex;
-  // justify-content: center;
-  align-items: center;
-
-}
-
-.about-card-button {
-  // margin-bottom: 1rem
-}
-
-.card-body {
-  padding-top: $spacer * 0.5;
-  padding-bottom: $spacer * 0.5;
-}
-
-.news_readmore_icon {
-  text-align: right;
-  align-self: right;
-  align-items: right;
-}
-
-ul {
-  list-style: none;
-  margin: 0 0 0 1em;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
   padding: 0;
 }
 
-.footer-content {
-  max-width: 1050px;
-  margin: 2em auto;
-  font-size: 0.85em;
+.navbar {
+  background: $white !important;
+  z-index: 2;
 }
 
-.tb {
-  background-color: #ff2dfa;
-  //padding: #800e79;
-  border: medium solid #00aced;
+.top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background: url("http://green-leaf.info/wp-content/uploads/2019/01/header_key_visual_1366698.png");
+  background-size: cover;
 }
+
+.block {
+  height: calc(90vh - 66px);
+}
+
+.foot-bg {
+  background: url("http://green-leaf.info/wp-content/uploads/2019/01/foot-bg.png");
+  background-size: cover;
+}
+
+.text-sm {
+  font-size: $font-small !important;
+}
+
+.key-visual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-white {
+  background: $white;
+}
+
+.bg-green {
+  background: #f2f7f0;
+}
+
+.box-title {
+  font-size: $font-title-sm;
+  font-weight: $bold;
+}
+
+.course-box {
+  background: #fdfcef;
+  border: 1px dashed $orange;
+  padding: 20px !important;
+  max-width: $box-size !important;
+  height: 100%;
+}
+
+#blog-table td {
+  font-size: $font-small;
+}
+
+.blog-box>.table td,
+.course-box>.table td,
+.event-box>.table td {
+  padding: 0 3px 8px 0;
+}
+
+.bg-footer {
+  background: #afc9aa;
+}
+
+.color-orange,
+.color-orange>a {
+  color: $orange !important;
+}
+
+.color-green {
+  color: $green !important;
+}
+
+.color-white {
+  color: $white !important;
+}
+
+.text-bold {
+  font-weight: $bold;
+}
+
+.outline-green {
+  border: 1px solid $green !important;
+}
+
+.outline-orange {
+  border: 1px solid $orange !important;
+}
+
+.btn-custom {
+  width: 120px !important;
+  background: $white;
+  margin-top: 15px;
+}
+
+.tile-white {
+  background: $white;
+  max-width: $box-size !important;
+  line-height: 2;
+}
+
+.flower01 {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 30px;
+  height: auto;
+}
+
+.flower02 {
+  display: none;
+  position: absolute;
+  left: -100px;
+  top: 60px;
+}
+
+.flower03 {
+  display: inline;
+  position: absolute;
+  left: 50%;
+  bottom: -110px;
+  transform: translateX(-50%);
+}
+
+.googlecal-wrap {
+  max-width: 800px;
+  margin: 3% auto;
+}
+
+.googlecal {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.googlecal iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.to-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background: $green;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.to-top a {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+.to-top a>i {
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 12.5px;
+  left: 12.5px;
+  transform: rotateZ(270deg);
+  margin: auto;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .googlecal { padding-bottom: 75%; }
+
+  .blog-box>.table td,
+  .course-box>.table td,
+  .event-box>.table td {
+    padding: 0 0 8px;
+  }
+
+  .text-sm-right {
+    text-align: right;
+  }
+
+  .box-right {
+    padding: 0 0 0 15px;
+  }
+
+  .box-left {
+    padding: 0 15px 0 0;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1000px) {
+  p, td {
+    font-size: $font-normal;
+  }
+
+  #blog-table td {
+    font-size: $font-normal;
+  }
+
+  .blog-title {
+    font-size: $font-blog-title;
+  }
+
+  .section-title {
+    font-size: $font-title;
+  }
+
+  .section-title:before {
+    margin-right: 3rem;
+  }
+
+  .section-title:after {
+    margin-left: 3rem;
+  }
+
+  .box-title {
+    font-size: $font-title;
+  }
+
+  .box-right {
+    margin: 0 0 0 30px;
+    padding: 0 !important;
+  }
+
+  .box-left {
+    margin: 0 30px 0 0;
+    padding: 0 !important;
+  }
+
+  .to-top {
+    right: 50px;
+    bottom: 50px;
+  }
+
+  .flower01{
+    position: absolute;
+    right: 0px;
+    bottom: 60px;
+    width: 59px;
+    height: auto;
+  }
+
+  .flower02 {
+    display: inline;
+  }
+
+  .flower03 {
+    display: inline;
+    position: absolute;
+    left: 110%;
+    bottom: 60px;
+    transform: translateX(-100%);
+  }
+}
+
+@import "../../src/sass/bootstrap4/bootstrap.scss";

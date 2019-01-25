@@ -3,7 +3,23 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 
-$primary: #6f31cd; // Thats a sample how you could change a BootStrap variable.
+$font-blog-title: 24px;
+$font-title: 21px;
+$font-title-sm: 18px;
+$font-normal: 15px;
+$font-small: 13px;
+$bold: bold;
+
+$orange: #f18d00;
+$green: #399d26;
+$white: #fff;
+$black: #29180c;
+
+$theme-colors: (
+  "white": $white,
+);
+
+$box-size: 470px;
 
 $spacer: 1rem !default;
 $spacers: () !default;
@@ -14,5 +30,6 @@ $spacers: map-merge((
   3: $spacer,
   4: ($spacer * 1.5),
   5: ($spacer * 3),
-  6: ($spacer * 5)
+  6: ($spacer * 5),
+  7: ($spacer * 7.5)
 ), $spacers);
