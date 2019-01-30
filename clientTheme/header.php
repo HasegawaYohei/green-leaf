@@ -12,6 +12,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133434831-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-133434831-1');
+	</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,6 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="shortcut icon" href="http://green-leaf.info/wp-content/uploads/2019/01/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="http://green-leaf.info/wp-content/uploads/2019/01/favicon.ico" type="image/x-icon">
+	<meta property="og:image" content="http://green-leaf.info/assets/ogp/ogp.jpg" />
 	<?php wp_head(); ?>
 </head>
 

@@ -69,3 +69,34 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
+
+function echo_blog_feed() {
+  include_once( ABSPATH . WPINC . '/feed.php' );
+  $rss = fetch_feed( 'http://rssblog.ameba.jp/michiru-herbgarden/rss20.xml' );
+  $maxitems = 0;
+  $feed = array();
+
+  if ( ! is_wp_error( $rss ) ) {
+      $maxitems = $rss->get_item_quantity( 5 );
+      $rss_items = $rss->get_items( 0, $maxitems );
+  }
+
+  if ( $maxitems != 0 ) {
+    foreach ( $rss_items as $item ) {
+      $date = $item->get_date('Y/m/j');
+      $link = esc_url($item->get_permalink());
+      $title = $item->get_title();
+      $feed[] = <<<EOD
+        <p>
+          <span class="color-green">$date</span>
+          <a href="$link" class="color-orange ml-4" target="_blank">$title</a>
+        </p>
+EOD;
+
+    }
+  }
+
+  return implode("", $feed);
+}
+add_shortcode('blog_feed', 'echo_blog_feed');

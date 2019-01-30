@@ -136,6 +136,7 @@ td {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 75%;
 }
 
 .bg-white {
@@ -211,11 +212,12 @@ td {
 }
 
 .flower01 {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  width: 30px;
-  height: auto;
+  display: none;
+  // position: absolute;
+  // right: 20px;
+  // bottom: 20px;
+  // width: 30px;
+  // height: auto;
 }
 
 .flower02 {
@@ -264,7 +266,7 @@ td {
   z-index: 100;
 }
 
-.to-top a {
+.to-top span {
   position: absolute;
   display: block;
   width: 50px;
@@ -272,7 +274,7 @@ td {
   text-decoration: none;
 }
 
-.to-top a>i {
+.to-top span>i {
   font-size: 25px;
   color: #fff;
   position: absolute;
@@ -361,6 +363,7 @@ td {
   }
 
   .flower01{
+    display: inline;
     position: absolute;
     right: 0px;
     bottom: 60px;

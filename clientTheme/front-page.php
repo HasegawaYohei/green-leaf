@@ -36,20 +36,22 @@ $container   = get_theme_mod( 'understrap_container_type' );
     </div>
   </nav>
 
-  <div class="to-top"><a href="#"><i class="fas fa-angle-right"></i></a></div>
+  <div class="to-top" id="toTop"><span><i class="fas fa-angle-right"></i></span></div>
 
-  <div class="container-flud top-bg">
+  <div class="container-flud top-bg" id="top">
     <div class="row">
       <img src="http://green-leaf.info/wp-content/uploads/2019/01/key_visual_logo.png" class="key-visual">
     </div>
   </div>
   <div class="block"></div>
+
   <div class="container-flud py-3 py-md-5 bg-white">
     <div class="row">
       <div class="col-10 mx-auto section-box">
         <div class="row">
           <div class="col-12 col-md-7 blog-box order-sm-2 mt-4 mt-sm-0 mb-4">
             <p class="blog-title text-center text-sm-left mb-3">おおそねみちるブログ MICHIRUハーブの庭</p>
+            <?php the_content(); ?>
             <div class="blog-list">
               <p>
                 <span class="color-green">2019/01/20</span>
@@ -376,5 +378,26 @@ $container   = get_theme_mod( 'understrap_container_type' );
     </div>
   </div>
 </div>
+
+<script>
+function getScrolled() {
+ return ( window.pageYOffset !== undefined ) ? window.pageYOffset : document.documentElement.scrollTop;
+}
+
+function scrollToTop() {
+  const scrolled = getScrolled();
+  console.dir(scrolled);
+  window.scrollTo( 0, Math.floor( scrolled - 400 ) );
+  if ( scrolled > 0 ) {
+    window.setTimeout( scrollToTop, 30 );
+  }
+};
+
+const topButton = document.getElementById('toTop');
+
+topButton.onclick = function() {
+  scrollToTop();
+};
+</script>
 
 <?php get_footer(); ?>
