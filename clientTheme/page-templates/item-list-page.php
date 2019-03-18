@@ -40,12 +40,6 @@ $container = get_theme_mod( 'understrap_container_type' );
   <div class="container-flud py-5 bg-white">
     <div class="row">
       <?php
-        function title_dic($title) {
-          if ($title == "スペシャルオリジナルハーブティー") return "MEDICAL HERB TEA -SPECIAL BLEND-";
-          if ($title == "ファミリー向けハーブティー") return "MEDICAL HERB TEA for FAMILY";
-          if ($title == "ハーブの原料") return "HERBAL INGREDIENTS";
-          else return $title;
-        }
         $taxonomies = 'item-category'; // タクソノミー（カテゴリー）スラッグを指定
         $args = array(
           'hide_empty' => false, // 空のタームを出力しない場合はtrue
@@ -62,17 +56,19 @@ $container = get_theme_mod( 'understrap_container_type' );
             );
             $item_posts = get_posts( $args );
             if ( $item_posts ) {
-              echo '<p class="text-center color-orange section-title mb-4 mg-lg-5">'.title_dic($term->name).'</p>';
+              echo '<p class="text-center color-orange section-title my-4 mg-lg-5">'.$term->name.'</p>';
             ?>
             <div class="row item-list">
               <?php for ( $i = 0; $i < 3; $i++) : ?>
               <?php $post = $item_posts[$i]; setup_postdata( $post ); ?>
+              <?php if ($post): ?>
                 <div class="col-12 col-sm-4 mt-3 mt-sm-0 text-center">
                   <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail(array(300, 300), array('class' => 'img-fluid')); ?>
+                    <img src="<?php the_field('image'); ?>" alt="商品画像" class="img-fluid">
                     <p class="text-bold"><?php the_title(); ?></p>
                   </a>
                 </div>
+              <?php endif; ?>
               <?php endfor;
             } ?>
             </div>
