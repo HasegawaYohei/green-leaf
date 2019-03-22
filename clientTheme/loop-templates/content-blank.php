@@ -2,7 +2,7 @@
 /**
  * Blank content partial template.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 the_content();

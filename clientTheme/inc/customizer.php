@@ -2,7 +2,7 @@
 /**
  * Understrap Theme Customizer
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 /**
@@ -42,16 +42,16 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 
 		 //select sanitization function
         function understrap_theme_slug_sanitize_select( $input, $setting ){
-         
+
             //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
             $input = sanitize_key($input);
- 
-            //get the list of possible select options 
+
+            //get the list of possible select options
             $choices = $setting->manager->get_control( $setting->id )->choices;
-                             
+
             //return input if valid or return default option
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
-             
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
         }
 
 		$wp_customize->add_setting( 'understrap_container_type', array(

@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 /**
@@ -25,7 +25,7 @@ function understrap_wpcom_setup() {
 			'url'    => '',
 		);
 	}
-	
+
 	/* Add WP.com print styles */
 	add_theme_support( 'print-styles' );
 }

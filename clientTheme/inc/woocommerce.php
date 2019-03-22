@@ -2,7 +2,7 @@
 /**
  * Add WooCommerce support
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 add_action( 'after_setup_theme', 'understrap_woocommerce_support' );
 if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
@@ -11,7 +11,7 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 	 */
 	function understrap_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
-		
+
 		// Add New Woocommerce 3.0.0 Product Gallery support
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-zoom' );

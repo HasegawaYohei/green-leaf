@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 ?>
@@ -40,5 +40,5 @@
 				get_search_form();
 		endif; ?>
 	</div><!-- .page-content -->
-	
+
 </section><!-- .no-results -->

@@ -2,7 +2,7 @@
 /**
  * Left sidebar check.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 ?>
@@ -15,7 +15,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<?php get_sidebar( 'left' ); ?>
 <?php endif; ?>
 
-<?php 
+<?php
 	$html = '';
 	if ( 'right' === $sidebar_pos || 'left' === $sidebar_pos ) {
 		$html = '<div class="';

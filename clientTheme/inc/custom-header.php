@@ -2,7 +2,7 @@
 /**
  * Custom header setup.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 function understrap_custom_header_setup() {

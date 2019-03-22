@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 get_header();

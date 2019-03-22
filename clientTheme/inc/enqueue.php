@@ -2,7 +2,7 @@
 /**
  * Understrap enqueue scripts
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 if ( ! function_exists( 'understrap_scripts' ) ) {
