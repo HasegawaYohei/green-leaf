@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 $the_theme = wp_get_theme();
@@ -42,10 +42,10 @@ $container = get_theme_mod('understrap_container_type');
         <a href="https://ameblo.jp/michiru-herbgarden/" target="_blank"><img src="https://green-leaf.info/wp-content/uploads/2019/01/blog_banner_link.png" class="img-fluid"></a>
       </div>
       <div class="col-11 col-md-2 mt-3 mt-md-0 mx-auto mx-md-1 px-sm-0 text-center">
-        <a href="https://ameblo.jp/michiru-herbgarden/" target="_blank"><img src="https://green-leaf.info/wp-content/uploads/2019/01/onlineshop_banner.png" class="img-fluid"></a>
+        <a href="https://green-leaf.shop-pro.jp/" target="_blank"><img src="https://green-leaf.info/wp-content/uploads/2019/01/onlineshop_banner.png" class="img-fluid"></a>
       </div>
       <div class="col-11 col-md-2 mt-3 mt-md-0 px-sm-0 mx-auto mx-md-1 text-center text-sm-left mx-auto">
-        <a href="https://green-leaf.shop-pro.jp/" target="_blank"><img src="https://green-leaf.info/wp-content/uploads/2019/03/counceling-banner.png" class="img-fluid"></a>
+        <a href="https://green-leaf.info/counselling/" target="_blank"><img src="https://green-leaf.info/wp-content/uploads/2019/03/counceling-banner.png" class="img-fluid"></a>
       </div>
     </div>
   </div>
@@ -91,16 +91,16 @@ $container = get_theme_mod('understrap_container_type');
       </div>
     </div>
     <div class="row">
-      <div class="col-11 col-sm-8 d-none d-sm-block section-box footer-link color-green mx-auto text-center">
+      <div class="col-11 col-sm-8 d-none d-sm-block section-box footer-link color-green mx-auto text-sm text-center">
         <a href="https://green-leaf.info/">ホーム</a>｜
         <a href="https://green-leaf.info/concept/">コンセプト</a>｜
-        <a href="https://green-leaf.info/cace/tsukuba/">ハーブかふぇROOT</a>｜
-        <a href="https://green-leaf.info/cace/hitachi/">ハーブ専門店グリーンリーフ</a>｜
+        <a href="https://green-leaf.info/cafe/tsukuba/">ハーブかふぇROOT</a>｜
+        <a href="https://green-leaf.info/cafe/hitachi/">ハーブ専門店グリーンリーフ</a>｜
         <a href="https://green-leaf.info/">イベント</a>｜
         <a href="https://green-leaf.info/tea/">商品紹介</a>｜
         <a href="https://green-leaf.info/course/">プログラム紹介</a>｜
         <a href="https://green-leaf.shop-pro.jp/" target="_blank">オンラインショップ</a><br>
-        <a href="https://green-leaf.info/counceling/">ハーブティー外来・質問票フォーム</a>｜
+        <a href="https://green-leaf.info/counselling/">ハーブティー外来・質問票フォーム</a>｜
         <a href="https://green-leaf.info/contact/">お問い合わせ</a>｜
         <a href="https://green-leaf.info/privacy-policy/">プライバシーポリシー</a>
       </div>
