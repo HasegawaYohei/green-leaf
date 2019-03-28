@@ -2,7 +2,7 @@
 /**
  * Single post partial template.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 ?>
@@ -38,7 +38,7 @@
 	</main>
 	<div class="mt-4">
 		<p class="text-center">
-			<a class="btn btn-large outline-green color-green mt-3">オンラインショップへ</a>
+			<a class="btn btn-large outline-green color-green mt-3" href="<?php the_field(''); ?>">オンラインショップへ</a>
 		</p>
 	</div>
 	<div class="mt-4">
@@ -56,7 +56,7 @@
 			$related_posts = new WP_Query( $args );
 			if( $related_posts->have_posts() ) :
 	?>
-		<h3>関連記事</h3>
+		<h3>関連商品</h3>
 		<ul id="related-item">
 			<?php
 				while ( $related_posts->have_posts() ) :
@@ -71,7 +71,7 @@
 	</div>
 	<div class="mt-4">
 		<p class="text-center">
-			<a class="btn btn-large outline-orange color-orange mt-3">商品紹介 一覧へ</a>
+			<a class="btn btn-wide outline-orange color-orange mt-3" href="https://green-leaf.info/tea/">商品紹介 一覧へ&nbsp;<i class="fas fa-angle-right"></i></a>
 		</p>
 	</div>
 </article>
