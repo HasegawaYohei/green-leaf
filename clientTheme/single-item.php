@@ -54,7 +54,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 										<?php
 											foreach ( $item_posts as $post ) :
 												setup_postdata( $post ); ?>
-												<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+												<li class="my-3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 											<?php endforeach;
 									} ?>
 								</div>
