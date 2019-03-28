@@ -13,11 +13,37 @@ p {
   margin: 0 !important;
   padding: 0 !important;
   font-size: $font-small;
+  line-height: 2;
 }
 
 td {
   border-top: 0px !important;
   font-size: $font-small;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::placeholder {
+  color: #e9ecef !important;
+}
+
+::-webkit-input-placeholder {
+  color: #e9ecef !important;
+}
+
+::-moz-placeholder {
+  color: #e9ecef !important;
+}
+
+:-ms-input-placeholder {
+  color: #e9ecef !important;
 }
 
 .font-15 {
@@ -111,6 +137,33 @@ td {
   padding: 0 !important;
 }
 
+.shop-info-box ul {
+  padding-left: 20px;
+}
+
+.shop-info-box {
+  line-height: 30px;
+}
+
+.map-box {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.map-box iframe,
+.map-box object,
+.map-box embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .box-right {
   margin: 0 auto;
   padding: 0 30px !important;
@@ -160,9 +213,44 @@ td {
   padding: 0;
 }
 
+.drop-hover:hover > .dropdown-menu {
+  display: block !important;
+}
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 250%;
+  color: #555;
+  font-size: 16px;
+  background: $green !important;
+}
+
+.dropdown-menu:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 25%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid $green;
+}
+
+.dropdown-menu li > a:hover {
+  background: $light-green !important;
+  color: $green !important;
+}
+
 .navbar {
   background: $white !important;
   z-index: 2;
+}
+
+.nav-item {
+  margin-right: 1rem;
 }
 
 .top-bg {
@@ -171,8 +259,39 @@ td {
   left: 0;
   width: 100%;
   height: 90vh;
+  opacity: 0;
+  animation: key-visual-anime 20s infinite;
+}
+
+.key-visual-src1 {
+  background-size: cover !important;
   background: url("http://green-leaf.info/wp-content/uploads/2019/01/header_key_visual_1366698.png");
-  background-size: cover;
+}
+
+.key-visual-src2 {
+  background-size: cover !important;
+  background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-02.png");
+  animation-delay: 5s;
+}
+
+.key-visual-src3 {
+  background-size: cover !important;
+  background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-03.png");
+  animation-delay: 10s;
+}
+
+.key-visual-src4 {
+  background-size: cover !important;
+  background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-04.png");
+  animation-delay: 15s;
+}
+
+@keyframes key-visual-anime {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 .block {
@@ -194,6 +313,47 @@ td {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 75%;
+}
+
+.key-visual-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  max-width: 75%;
+  background: $white;
+  font-size: $font-title;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.page-numbers {
+  border: solid 1px #CCCCCC;
+  border-radius: 15%;
+  padding: 8px 15px;
+  color: $black !important;
+}
+
+.nav-links > .dots {
+  border: none;
+}
+
+.nav-links > .current {
+  background: $green;
+  color: $white !important;
+}
+
+.nav-links > .prev,
+.nav-links > .next {
+  background: #F5F4F3;
 }
 
 .form-group:nth-child(odd) {
@@ -260,6 +420,10 @@ td {
   background: #F4F8F7;
 }
 
+.footer-link {
+  line-height: 2.5;
+}
+
 .footer-link a,
 .footer-link a:hover {
   color: $green;
@@ -306,15 +470,32 @@ td {
   color: $white;
 }
 
+.btn-green-sm {
+  width: 120px;
+  background: $green;
+  margin-top: 15px;
+  color: $white;
+}
+
 .btn-custom {
   width: 120px !important;
   background: $white;
   margin-top: 15px;
 }
 
+.btn-medium {
+  width: 180px !important;
+  background: $white;
+}
+
+.btn-wide {
+  width: 300px !important;
+  background: $white;
+}
+
 .btn-large {
   width: 300px !important;
-  // height: 60px !important;
+  padding: 27px !important;
   background: $white;
 }
 
@@ -330,11 +511,6 @@ td {
 
 .flower01 {
   display: none;
-  // position: absolute;
-  // right: 20px;
-  // bottom: 20px;
-  // width: 30px;
-  // height: auto;
 }
 
 .flower02 {
@@ -468,6 +644,13 @@ td {
     font-size: $font-normal;
   }
 
+  .key-visual-box {
+    top: 55%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: $font-blog-title;
+  }
+
   .blog-title {
     font-size: $font-blog-title;
   }
@@ -528,6 +711,21 @@ td {
     bottom: 60px;
     transform: translateX(-100%);
   }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2),
+  (min-resolution: 2dppx){
+    .key-visual-src2 {
+      background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-02@2x.png");
+    }
+
+    .key-visual-src3 {
+      background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-03@2x.png");
+    }
+
+    .key-visual-src4 {
+      background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-04@2x.png");
+    }
 }
 
 @import "../../src/sass/bootstrap4/bootstrap.scss";

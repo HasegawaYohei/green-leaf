@@ -10875,11 +10875,37 @@ body {
 p {
   margin: 0 !important;
   padding: 0 !important;
-  font-size: 13px; }
+  font-size: 13px;
+  line-height: 2; }
 
 td {
   border-top: 0px !important;
   font-size: 13px; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+::-webkit-input-placeholder {
+  color: #e9ecef !important; }
+
+::-ms-input-placeholder {
+  color: #e9ecef !important; }
+
+::placeholder {
+  color: #e9ecef !important; }
+
+::-webkit-input-placeholder {
+  color: #e9ecef !important; }
+
+::-moz-placeholder {
+  color: #e9ecef !important; }
+
+:-ms-input-placeholder {
+  color: #e9ecef !important; }
 
 .font-15 {
   font-size: 15px; }
@@ -10964,6 +10990,29 @@ td {
   max-width: 1000px !important;
   padding: 0 !important; }
 
+.shop-info-box ul {
+  padding-left: 20px; }
+
+.shop-info-box {
+  line-height: 30px; }
+
+.map-box {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  width: 100%;
+  overflow: hidden; }
+
+.map-box iframe,
+.map-box object,
+.map-box embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .box-right {
   margin: 0 auto;
   padding: 0 30px !important;
@@ -11003,9 +11052,39 @@ td {
   margin: 0;
   padding: 0; }
 
+.drop-hover:hover > .dropdown-menu {
+  display: block !important; }
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 250%;
+  color: #555;
+  font-size: 16px;
+  background: #399d26 !important; }
+
+.dropdown-menu:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 25%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #399d26; }
+
+.dropdown-menu li > a:hover {
+  background: #f5f9f4 !important;
+  color: #399d26 !important; }
+
 .navbar {
   background: #fff !important;
   z-index: 2; }
+
+.nav-item {
+  margin-right: 1rem; }
 
 .top-bg {
   position: absolute;
@@ -11013,8 +11092,55 @@ td {
   left: 0;
   width: 100%;
   height: 90vh;
-  background: url("http://green-leaf.info/wp-content/uploads/2019/01/header_key_visual_1366698.png");
-  background-size: cover; }
+  opacity: 0;
+  -webkit-animation: key-visual-anime 20s infinite;
+          animation: key-visual-anime 20s infinite; }
+
+.key-visual-src1 {
+  background-size: cover !important;
+  background: url("http://green-leaf.info/wp-content/uploads/2019/01/header_key_visual_1366698.png"); }
+
+.key-visual-src2 {
+  background-size: cover !important;
+  background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-02.png");
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
+
+.key-visual-src3 {
+  background-size: cover !important;
+  background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-03.png");
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s; }
+
+.key-visual-src4 {
+  background-size: cover !important;
+  background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-04.png");
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s; }
+
+@-webkit-keyframes key-visual-anime {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  25% {
+    opacity: 1; }
+  30% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes key-visual-anime {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  25% {
+    opacity: 1; }
+  30% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
 
 .block {
   height: calc(90vh - 66px); }
@@ -11033,6 +11159,42 @@ td {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: 75%; }
+
+.key-visual-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 75%;
+  background: #fff;
+  font-size: 21px; }
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; }
+
+.page-numbers {
+  border: solid 1px #CCCCCC;
+  border-radius: 15%;
+  padding: 8px 15px;
+  color: #29180c !important; }
+
+.nav-links > .dots {
+  border: none; }
+
+.nav-links > .current {
+  background: #399d26;
+  color: #fff !important; }
+
+.nav-links > .prev,
+.nav-links > .next {
+  background: #F5F4F3; }
 
 .form-group:nth-child(odd), .wpcf7 .wpcf7-form p:nth-child(odd) {
   background: #E6F3DF !important; }
@@ -11084,6 +11246,9 @@ td {
   border-top: solid 1px #399d26;
   background: #F4F8F7; }
 
+.footer-link {
+  line-height: 2.5; }
+
 .footer-link a,
 .footer-link a:hover {
   color: #399d26;
@@ -11120,13 +11285,28 @@ td {
   margin-top: 15px;
   color: #fff; }
 
+.btn-green-sm {
+  width: 120px;
+  background: #399d26;
+  margin-top: 15px;
+  color: #fff; }
+
 .btn-custom {
   width: 120px !important;
   background: #fff;
   margin-top: 15px; }
 
+.btn-medium {
+  width: 180px !important;
+  background: #fff; }
+
+.btn-wide {
+  width: 300px !important;
+  background: #fff; }
+
 .btn-large {
   width: 300px !important;
+  padding: 27px !important;
   background: #fff; }
 
 .tile-white {
@@ -11233,6 +11413,12 @@ td {
     font-size: 15px; }
   #blog-table td {
     font-size: 15px; }
+  .key-visual-box {
+    top: 55%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 24px; }
   .blog-title {
     font-size: 24px; }
   .sidebar-title {
@@ -11271,6 +11457,14 @@ td {
     bottom: 60px;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%); } }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .key-visual-src2 {
+    background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-02@2x.png"); }
+  .key-visual-src3 {
+    background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-03@2x.png"); }
+  .key-visual-src4 {
+    background: url("https://green-leaf.info/wp-content/uploads/2019/03/keyvisual-04@2x.png"); } }
 
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
