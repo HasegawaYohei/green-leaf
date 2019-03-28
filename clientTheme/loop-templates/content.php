@@ -2,49 +2,23 @@
 /**
  * Post rendering content according to caller of get_template_part.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
-
+$title = '【' . get_field('date') . '】' . get_field('event_name');
+$datetime = get_field('date') . '　' . get_field('start_time') . '〜' . get_field('end_time');
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-	<header class="entry-header">
-
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-		'</a></h2>' ); ?>
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-
-			<div class="entry-meta">
-				<?php understrap_posted_on(); ?>
-			</div><!-- .entry-meta -->
-
-		<?php endif; ?>
-
-	</header><!-- .entry-header -->
-
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
-	<div class="entry-content">
-
-		<?php
-		the_excerpt();
-		?>
-
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
-
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
-
-</article><!-- #post-## -->
+<article class="row section-row mx-auto mb-6" id="post-<?php the_ID(); ?>">
+	<div class="col-12 col-md-5">
+		<img src="<?php the_field('image'); ?>" class="img-fluid">
+	</div>
+	<div class="col-12 col-md-7">
+		<p class="section-title-noline mb-0 mb-md-5"><?php echo $title;  ?></p>
+		<p class="">
+			日時 : <?php echo $datetime; ?><br>
+			場所 : <?php the_field('place'); ?><br>
+			費用 : <?php the_field('price'); ?>円（税込）<br>
+			<a class="btn btn-custom outline-orange color-orange" href="<?php the_permalink(); ?>">more&nbsp;<i class="fas fa-angle-right"></i></a>
+		</p>
+	</div>
+</article>
