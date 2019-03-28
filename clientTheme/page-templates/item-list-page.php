@@ -59,13 +59,13 @@ $container = get_theme_mod( 'understrap_container_type' );
               echo '<p class="text-center color-orange section-title my-4 mg-lg-5">'.$term->name.'</p>';
             ?>
             <div class="row item-list">
-              <?php for ( $i = 0; $i < 3; $i++) : ?>
+              <?php for ( $i = 0; $i < 99; $i++) : ?>
               <?php $post = $item_posts[$i]; setup_postdata( $post ); ?>
               <?php if ($post): ?>
                 <div class="col-12 col-sm-4 mt-3 mt-sm-0 text-center">
                   <a href="<?php the_permalink(); ?>">
                     <img src="<?php the_field('image'); ?>" alt="商品画像" class="img-fluid">
-                    <p class="text-bold"><?php the_title(); ?></p>
+                    <p class="text-bold mb-6"><?php the_title(); ?></p>
                   </a>
                 </div>
               <?php endif; ?>
