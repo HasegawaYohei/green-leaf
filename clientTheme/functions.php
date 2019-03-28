@@ -2,7 +2,7 @@
 /**
  * Understrap functions and definitions
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 /**
@@ -248,58 +248,6 @@ function override_widget_categories() {
 }
 add_action( 'widgets_init', 'override_widget_categories' );
 
-// function add_book_fields() {
-// 	//add_meta_box(表示される入力ボックスのHTMLのID, ラベル, 表示する内容を作成する関数名, 投稿タイプ, 表示方法)
-// 	//第4引数のpostをpageに変更すれば固定ページにオリジナルカスタムフィールドが表示されます(custom_post_typeのslugを指定することも可能)。
-// 	//第5引数はnormalの他にsideとadvancedがあります。
-// 	add_meta_box( 'book_setting', '本の情報', 'insert_book_fields', 'events', 'normal');
-// }
-// add_action('admin_menu', 'add_book_fields');
-
-
-// // カスタムフィールドの入力エリア
-// function insert_book_fields() {
-// 	global $post;
-
-// 	//下記に管理画面に表示される入力エリアを作ります。「get_post_meta()」は現在入力されている値を表示するための記述です。
-// 	echo '題名： <input type="text" name="book_name" value="'.get_post_meta($post->ID, 'book_name', true).'" size="50" /><br>';
-// 	echo '作者： <input type="text" name="book_author" value="'.get_post_meta($post->ID, 'book_author', true).'" size="50" /><br>';
-// 	echo '価格： <input type="text" name="book_price" value="'.get_post_meta($post->ID, 'book_price', true).'" size="50" />　<br>';
-
-// 	if( get_post_meta($post->ID,'book_label',true) == "is-on" ) {
-// 		$book_label_check = "checked";
-// 	}//チェックされていたらチェックボックスの$book_label_checkの場所にcheckedを挿入
-// 	echo 'ベストセラーラベル： <input type="checkbox" name="book_label" value="is-on" '.$book_label_check.' ><br>';
-// }
-
-// // カスタムフィールドの値を保存
-// add_action('save_post', 'save_book_fields');
-// function save_book_fields( $post_id ) {
-// 	if(!empty($_POST['book_name'])){ //題名が入力されている場合
-// 		update_post_meta($post_id, 'book_name', $_POST['book_name'] ); //値を保存
-// 	}else{ //題名未入力の場合
-// 		delete_post_meta($post_id, 'book_name'); //値を削除
-// 	}
-
-// 	if(!empty($_POST['book_author'])){
-// 		update_post_meta($post_id, 'book_author', $_POST['book_author'] );
-// 	}else{
-// 		delete_post_meta($post_id, 'book_author');
-// 	}
-
-// 	if(!empty($_POST['book_price'])){
-// 		update_post_meta($post_id, 'book_price', $_POST['book_price'] );
-// 	}else{
-// 		delete_post_meta($post_id, 'book_price');
-// 	}
-
-// 	if(!empty($_POST['book_label'])){
-// 		update_post_meta($post_id, 'book_label', $_POST['book_label'] );
-// 	}else{
-// 		delete_post_meta($post_id, 'book_label');
-// 	}
-// }
-
 function echo_blog_feed() {
   include_once( ABSPATH . WPINC . '/feed.php' );
   $rss = fetch_feed( 'http://rssblog.ameba.jp/michiru-herbgarden/rss20.xml' );
@@ -317,7 +265,7 @@ function echo_blog_feed() {
       $link = esc_url($item->get_permalink());
       $title = $item->get_title();
       $feed[] = <<<EOD
-        <p>
+        <p class="py-1">
           <span class="color-green">$date</span>
           <a href="$link" class="color-orange ml-4" target="_blank">$title</a>
         </p>
@@ -329,3 +277,44 @@ EOD;
   return implode("", $feed);
 }
 add_shortcode('blog_feed', 'echo_blog_feed');
+
+function echo_latest_event() {
+  $args = array(
+    'post_type'     => 'event',
+    'posts_per_page'=> 5
+  );
+  $posts = get_posts( $args );
+  $row = array();
+  for ($i = 0; $i < 3; $i++) {
+    global $post;
+    $post = $posts[$i];
+    setup_postdata($post);
+    $image = get_field('image');
+    $date = get_field('date');
+    $title = '【' . $date . '】' . get_field('event_name');
+    $time = get_field('start_time') . '〜' . get_field('end_time');
+    $place = get_field('place');
+    $price = get_field('price') . '円 (税込)';
+    $link = get_permalink();
+
+    $row[] = <<<EOD
+    <div class="row mt-5">
+      <div class="col-9 col-md-5 text-left text-sm-right ml-auto mr-auto mr-sm-0">
+        <img src="$image" class="img-fluid">
+      </div>
+      <div class="col-9 mx-auto mx-lg-0 col-md-5 col-lg-6 event-box ml-sm-0">
+        <p class="box-title mt-4 mt-sm-0">$title</p>
+        <p class="mt-2">日程:&nbsp;$date</p>
+        <p class="mt-2">時間:&nbsp;$time</p>
+        <p class="mt-2">場所:&nbsp;$place</p>
+        <p class="mt-2">費用:&nbsp;$price</p>
+        <p class="text-center text-sm-left"><a href="$link" class="btn btn-custom outline-orange color-orange">more&nbsp;<i class="fas fa-angle-right"></i></a></p>
+      </div>
+    </div>
+EOD;
+
+  }
+
+  return implode("", $row);
+}
+add_shortcode('latest_event', 'echo_latest_event');
