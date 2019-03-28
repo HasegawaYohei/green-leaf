@@ -2,7 +2,7 @@
 /**
  * Right sidebar check.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 ?>
 
