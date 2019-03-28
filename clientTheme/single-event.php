@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php
 							$taxonomies = 'event-category'; // タクソノミー（カテゴリー）スラッグを指定
 							$args = array(
-									'hide_empty' => false, // 空のタームを出力しない場合はtrue
+								'hide_empty' => false, // 空のタームを出力しない場合はtrue
 							);
 							$terms = get_terms( $taxonomies , $args );
 							foreach ($terms as $term) :?>
@@ -69,7 +69,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<p class="sidebar-title">最新記事</p>
 									<ul>
 										<?php foreach ( $event_posts as $post ) : setup_postdata( $post ); ?>
-											<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+											<li class="my-3"><a href="<?php the_permalink(); ?>">【<?php the_field('date'); ?>】<?php the_title(); ?></a></li>
 										<?php endforeach; ?>
 									</ul>
 								</div>
