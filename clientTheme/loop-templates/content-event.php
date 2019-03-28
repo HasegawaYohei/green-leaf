@@ -2,14 +2,14 @@
 /**
  * Single post partial template.
  *
- * @package understrap
+ * @package GREEN LEAF
  */
 
 ?>
 <article class="lh-2" id="post-<?php the_ID(); ?>">
   <header class="row">
 		<div class="col-11 col-md-12 mx-auto">
-			<p class="section-title-noline underline"><?php the_field('event_name'); ?></p>
+			<p class="section-title-noline underline">【<?php the_field('date'); ?>】<?php the_field('event_name'); ?></p>
 		</div>
 	</header>
 	<main class="row">
@@ -48,7 +48,7 @@
 	</main>
 	<div class="mt-4">
 		<p class="text-center">
-			<a class="btn btn-large outline-green color-green mt-3">イベント申し込みへ&nbsp;<i class="fas fa-angle-down"></i></a>
+			<a href="#calendar" class="btn btn-large outline-green color-green mt-3">イベント申し込みへ&nbsp;<i class="fas fa-angle-down"></i></a>
 		</p>
 	</div>
 </article>
